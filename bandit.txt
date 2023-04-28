@@ -1,0 +1,158 @@
+
+1 Problemas con nombres de archivos
+1.1 Nombre -
+-- Hay archivos que pueden llamarse -, esto da errores al realizar comandos como cat o ls
+para leerlo:
+	cat ./-
+
+Tambien se puede abrir tirando de la ruta absoluta:
+	cat /home/usuario/-
+
+Tambien desde el comando $(pwd)
+	cat $(pwd)/-
+
+1.2 nombres con espacios
+
+	cat archivo\ con\ nombres
+
+
+
+2 Comando find
+
+filtrar por tamaño
+find -size, -empty
+	---> parametros:
+	c = bytes
+	w = 2 byte words
+	k = kilobytes
+	b = 512-byte bloques
+
+	-- Encontrar un archivo que este entre 500b y 1000b
+	find . -size +500b -and -size -1000b
+
+Filtrar por ejecutable, legible
+
+find . -readable -executable - writeable
+--> no ejecutable
+	! -executable
+
+
+
+filtrar por tipo:
+	d - directorio o carpeta
+	f - archivo normal
+	l - enlace simbolico
+	c - dispositivos de caracteres
+	b - dispostivos de bloque
+	Ejemplo:
+	find / -type d 
+
+
+
+Filtrar por usuario propietario
+	por usuario
+	-user nombre_usuario
+	por grupo
+	-group nombre_grupo
+
+
+
+3 Comando xargs
+-- Sirve para utilizar el output de un comando usando anteriormente
+	Ejemplo:
+	find . -name .hidden | xargs cat 
+
+
+3.2 encontrar un archivo que contenga una palabra: 
+	find . -type f | xargs grep "leaving"
+
+
+4 modificar  output
+	sed el comando sed quita caracteres por otros
+
+		cat prueba.txt | sed 's/^ *//'
+		--> sed 's/texto_a_buscar/texto_a_reemplazar/'
+
+	tr:
+		tr ' ' '\n' --> Convierte los espacios en saltos de linea -- pero no sirve para cambiar palabras como sed
+
+
+	grep
+		cat prueba.txt | grep "^hola$ -n indica el numero de linea y la linea que termina por hola
+
+		grep '/millinion/' prueba.txt --> muestra la linea que contiene esa palabra
+	awk
+		cat prueba.txt | awk 'NR==numero_linea' muestra la linea por su número
+
+		awk '/millinion/' prueba.txt --> muestra la linea que contiene esa palabra
+
+		awk '/millinion/' prueba.txt | awk '{print $2}' ---> muestra la segunda palabra de la linea ya que lo entiende como parametro
+
+		awk '/milinion/' prueba.txt | awk 'NF{print $NF}' muestra la ultima palabra
+	wc -l 
+		cat prueba.txt | wc -l --> Muestra el total de lineas
+	wc -c
+		cat prueba.txt | wc -c --> muestra el total de caracteres
+
+
+
+
+	
+	
+
+	sort --> ordena alfabeticamente un output de un archivo
+	uniq -u --> muestra las lineas unicas de un archivo, lo compara con el de arriba
+	para saber las lineas que no se repiten:
+	cat prueba.txt | sort | uniq -u
+
+
+	devuelve los valores strings:
+		strings prueba.txt
+
+	devuelve las dos ultimas lineas:
+		cat prueba.txt | tail -n 2
+
+
+	encode base64
+	 codificar en base64:
+		base64 data.txt
+	 Descodificar:
+	    base64 -d data.txt
+	
+	hexadecimal
+		xxd  data.txt --> convierte en hexadecimal
+		xxd -r data.txt --> revierte	
+
+
+
+
+
+
+
+eliminar los errores por pantalla de un output:
+	comando  2>/dev/null
+
+	comando $?
+
+		echo $? devuelve 0 si el comando anterior no da error
+
+		echo $? devuelve distinto de 0 si da error
+
+Bucles:
+	while:
+		leer cada linea de un archivo:
+		while read line; do
+			echo "Estamos aquí: $line"
+		done < /prueba.txt
+
+
+
+
+
+
+
+
+
+
+Conocer el tipo de un archivo:
+	file nombre_archivo

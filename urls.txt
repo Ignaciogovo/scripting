@@ -1,0 +1,4 @@
+pagina web: https://overthewire.org/wargames/bandit/bandit10.html
+
+
+video: https://overthewire.org/wargames/bandit/bandit10.html
