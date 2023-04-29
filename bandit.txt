@@ -75,8 +75,10 @@ Filtrar por usuario propietario
 
 	tr:
 		tr ' ' '\n' --> Convierte los espacios en saltos de linea -- pero no sirve para cambiar palabras como sed
-
-
+		
+		Rotar 13 posiciones:
+		tr '[A-Za-z]' '[N-ZA-Mn-za-m]'  ---> N es la decimotercera letra a partir de la a
+		
 	grep
 		cat prueba.txt | grep "^hola$ -n indica el numero de linea y la linea que termina por hola
 
@@ -166,3 +168,33 @@ Comando base64
 
 	Para descodificar de base64:
 		base64 -d archivo.txt
+
+
+
+
+
+
+
+redes:
+
+
+
+telnet localhost puerto
+
+
+
+openssl:
+	Comprobar conextividad ssl
+
+	openssl s_client -connect servidor:puerto
+		ejemplo: openssl s_client -connect localhost:30001
+
+
+
+# Generar archivos y directorios temporales:
+	Generar un archivo con nombre aleatorio
+		mktemp 
+	Generar un direcorio con nombre aleatorio
+		mktemp -d
+	Generar un archivo con nombre definido
+		mktemp tempfileXXX
