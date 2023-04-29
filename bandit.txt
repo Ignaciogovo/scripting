@@ -156,3 +156,13 @@ Bucles:
 
 Conocer el tipo de un archivo:
 	file nombre_archivo
+
+
+
+
+Comando base64
+	Para codificar a base64:
+		base64 archivo.txt
+
+	Para descodificar de base64:
+		base64 -d archivo.txt
