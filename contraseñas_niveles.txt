@@ -21,3 +21,9 @@ nivel 14: se accede desde key privada  --> fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
 nivel 15: jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
 nivel 16: JQttfApK4SeyHwDlI9SXGR50qclOAil1
 nivel 17: VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e
+nivel 18: hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg  diff passwords.new passwords.old | awk 'NR==2' | awk 'NF{print $NF}'
+nivel 19: awhqfNnAbc1naukrpqDYcF95h7HoMTrC
+nivel 20: VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+nivel 21: NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+nivel 22: WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff
+nivel 23: QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G

@@ -1,4 +1,3 @@
-
 1 Problemas con nombres de archivos
 1.1 Nombre -
 -- Hay archivos que pueden llamarse -, esto da errores al realizar comandos como cat o ls
