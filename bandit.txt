@@ -1,3 +1,4 @@
+
 1 Problemas con nombres de archivos
 1.1 Nombre -
 -- Hay archivos que pueden llamarse -, esto da errores al realizar comandos como cat o ls
@@ -179,6 +180,25 @@ redes:
 
 
 telnet localhost puerto
+
+
+netcat
+
+nc
+	-l: abre un puerto y se mantiene en escucha
+	-k se usa junto -l con el objetivo de que se mantenga abierto tras la conexión
+	-u permite abrir puerto con el protocolo UPD
+	-p especifica el puerto de apertura
+	-t respuestas compatibles con sesiones telnet
+	
+
+	Conexión a un servidor:
+		nc localhost 8000
+
+
+
+
+
 
 
 
