@@ -1,4 +1,5 @@
 
+
 1 Problemas con nombres de archivos
 1.1 Nombre -
 -- Hay archivos que pueden llamarse -, esto da errores al realizar comandos como cat o ls
@@ -219,3 +220,8 @@ openssl:
 		mktemp -d
 	Generar un archivo con nombre definido
 		mktemp tempfileXXX
+
+
+# Variables de entorno:
+	$0 --> te genera un bash
+
