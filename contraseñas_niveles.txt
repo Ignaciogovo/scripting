@@ -1,6 +1,6 @@
 ssh -p 2220 bandit5@bandit.labs.overthewire.org
 
-
+/etc/bandit_pass/$myname
 
 nivel 0: bandit0
 nivel 1: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
@@ -28,3 +28,7 @@ nivel 21: NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
 nivel 22: WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff
 nivel 23: QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G
 nivel 24: VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
+nivel 25: p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
+nivel 26: c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1
+nivel 27: YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
+nivel 28: AVanL161y9rsbcJIsFHuw35rjaOM19nR

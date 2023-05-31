@@ -83,6 +83,8 @@ Filtrar por usuario propietario
 		cat prueba.txt | grep "^hola$ -n indica el numero de linea y la linea que termina por hola
 
 		grep '/millinion/' prueba.txt --> muestra la linea que contiene esa palabra
+
+		grep -v "Wrong" --> No mostrar las lineas que tengan la palabra Wrong
 	awk
 		cat prueba.txt | awk 'NR==numero_linea' muestra la linea por su número
 
